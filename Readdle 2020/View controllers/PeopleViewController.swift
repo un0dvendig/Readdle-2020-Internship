@@ -94,14 +94,26 @@ class PeopleViewController: UIViewController {
             switch sender.selectedSegmentIndex {
             case 0: /// List
                 viewModelReference?.currentLayout = .list
+                DispatchQueue.main.async {
+                    UIView.animate(withDuration: 0.2, delay: 0.05, options: .transitionCrossDissolve, animations: {
+                        /// To animate this properly we need index paths for SOME visible items.
+                        /// Not for all of them.
+                        /// TODO: Investigate, what they should be.
+                        view.peopleCollectionView.reloadData()
+                        view.peopleCollectionView.setCollectionViewLayout(view.listLayout, animated: false)
+                    })
+                }
             case 1: /// Grid
                 viewModelReference?.currentLayout = .grid
+                DispatchQueue.main.async {
+                    UIView.animate(withDuration: 0.2, delay: 0.05, options: .transitionCrossDissolve, animations: {
+                        let visibleCells = view.peopleCollectionView.indexPathsForVisibleItems
+                        view.peopleCollectionView.reloadItems(at: visibleCells)
+                        view.peopleCollectionView.setCollectionViewLayout(view.gridLayout, animated: false)
+                    })
+                }
             default:
                 break
-            }
-            
-            DispatchQueue.main.async {
-                view.peopleCollectionView.reloadData()
             }
         }
     }

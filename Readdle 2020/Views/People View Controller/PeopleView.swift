@@ -24,6 +24,8 @@ class PeopleView: UIView {
 
     lazy var peopleCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
+        let approximateWidth = UIScreen.main.bounds.width - 30
+        layout.itemSize = CGSize(width: approximateWidth, height: 50)
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -35,6 +37,21 @@ class PeopleView: UIView {
         let button = UIButton(type: .system)
         button.setTitle("Simulate Changes", for: .normal)
         return button
+    }()
+    
+    lazy var listLayout: UICollectionViewFlowLayout = {
+        let layout = UICollectionViewFlowLayout()
+        let width = peopleCollectionView.bounds.width - 20
+        layout.itemSize = CGSize(width: width, height: 50)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        return layout
+    }()
+    
+    lazy var gridLayout: UICollectionViewFlowLayout = {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: 50, height: 50)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        return layout
     }()
     
     // MARK: - Initialization

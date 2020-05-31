@@ -9,7 +9,6 @@
 import Foundation
 
 /// A singleton object that is responsible for storing and managing all Person entities.
-/// By default has `100` entities.
 class PersonsWarehouse {
     
     // MARK: - Properties
