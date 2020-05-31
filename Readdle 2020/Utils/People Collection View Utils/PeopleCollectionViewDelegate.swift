@@ -31,17 +31,3 @@ class PeopleCollectionViewDelegate: NSObject, UICollectionViewDelegate {
     }
     
 }
-
-extension PeopleCollectionViewDelegate: UICollectionViewDelegateFlowLayout {
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        switch currentLayout {
-//        case .list:
-//            let width = collectionView.bounds.width - 20
-//            return CGSize(width: width, height: 50)
-//        case .grid:
-//            return CGSize(width: 50, height: 50)
-//        }
-//    }
-    
-}
