@@ -53,6 +53,10 @@ class DetailedInfoView: UIView {
         return textView
     }()
     
+    // MARK: - Properties
+    
+    var alertHandler: AlertHandler?
+    
     // MARK: - Initialization
     
     override init(frame: CGRect) {
@@ -75,7 +79,7 @@ class DetailedInfoView: UIView {
         detailEmailTextView.text = viewModel.email
         
         if let url = viewModel.largeImageURL {
-            detailAvatarImageView.loadImageFrom(url: url) { (result) in
+            detailAvatarImageView.loadImageFrom(url: url) { [unowned self] (result) in
                 switch result {
                 case .success():
                     DispatchQueue.main.async {
@@ -84,16 +88,18 @@ class DetailedInfoView: UIView {
                         self.detailAvatarImageLoadingActivityIndicator.stopAnimating()
                     }
                 case .failure(let error):
-                    // TODO: Handle errors!
-                    print("An error accured while loading image: \(error)")
+                    let title = "An error occurred while loading image"
+                    self.alertHandler?.showAlertDialog(title: title, message: error.localizedDescription)
                     DispatchQueue.main.async {
                         self.detailAvatarImageLoadingActivityIndicator.stopAnimating()
                     }
                 }
             }
         } else {
-            // Has no image url.
-            // TODO: Handle errors!
+            // The Person for some reason has no image url.
+            let error = CustomError.cannotCreateImageURL
+            let title = "The Person \(viewModel.name) has invalid email"
+            self.alertHandler?.showAlertDialog(title: title, message: error.localizedDescription)
             detailAvatarImageLoadingActivityIndicator.stopAnimating()
         }
     }

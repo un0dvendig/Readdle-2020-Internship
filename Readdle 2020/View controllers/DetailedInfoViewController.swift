@@ -17,6 +17,13 @@ class DetailedInfoViewController: UIViewController {
     
     // MARK: - Private properties
     
+    private var alertHandler: AlertHandler? {
+        didSet {
+            if let view = self.view as? DetailedInfoView {
+                view.alertHandler = alertHandler
+            }
+        }
+    }
     private var viewModelReference: DetailedInfoViewModel?
     
     // MARK: - View life cycle
@@ -32,6 +39,7 @@ class DetailedInfoViewController: UIViewController {
         super.viewDidLoad()
         
         setupViewModel()
+        self.alertHandler = AlertHandler(delegate: self)
     }
     
     // MARK: - Private methods

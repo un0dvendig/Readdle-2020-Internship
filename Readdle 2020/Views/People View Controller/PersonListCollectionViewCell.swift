@@ -40,6 +40,10 @@ class PersonListCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
+    // MARK: - Properties
+    
+    var alertHandler: AlertHandler?
+    
     // MARK: - Initialization
     
     override init(frame: CGRect) {
@@ -59,7 +63,7 @@ class PersonListCollectionViewCell: UICollectionViewCell {
         personStatusView.backgroundColor = viewModel.statusColor
         
         if let url = viewModel.smallImageURL {
-            personAvatarImageView.loadImageFrom(url: url) { (result) in
+            personAvatarImageView.loadImageFrom(url: url) { [unowned self] (result) in
                 switch result {
                 case .success():
                     DispatchQueue.main.async {
@@ -68,16 +72,18 @@ class PersonListCollectionViewCell: UICollectionViewCell {
                         self.personAvatarLoadingActivityIndicatorView.stopAnimating()
                     }
                 case .failure(let error):
-                    // TODO: Handle errors!
-                    print("An error accured while loading image: \(error)")
+                    let title = "An error occurred while loading image"
+                    self.alertHandler?.showAlertDialog(title: title, message: error.localizedDescription)
                     DispatchQueue.main.async {
                         self.personAvatarLoadingActivityIndicatorView.stopAnimating()
                     }
                 }
             }
         } else {
-            // Has no image url.
-            // TODO: Handle errors!
+            // The Person for some reason has no image url.
+            let error = CustomError.cannotCreateImageURL
+            let title = "The Person \(viewModel.name) has invalid email"
+            self.alertHandler?.showAlertDialog(title: title, message: error.localizedDescription)
             personAvatarLoadingActivityIndicatorView.stopAnimating()
         }
     }

@@ -12,6 +12,8 @@ struct PeopleViewModel {
     
     // MARK: - Properties
     
+    weak var alertHandlerReference: AlertHandler?
+    
     weak var coordinatorReference: PeopleCoordinator? {
         didSet {
             if let collectionViewDelegate = self.collectionViewDelegate {
@@ -41,6 +43,7 @@ struct PeopleViewModel {
         self.currentLayout = .list
         
         let dataSource = PeopleCollectionViewDataSource(currentLayout: currentLayout)
+        dataSource.alertHandler = alertHandlerReference
         self.collectionViewDataSource = dataSource
         
         let delegate = PeopleCollectionViewDelegate(currentLayout: currentLayout)

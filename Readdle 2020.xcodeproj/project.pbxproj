@@ -25,7 +25,6 @@
 		DD17AD572482A9A3005499A7 /* PersonGridCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17AD562482A9A3005499A7 /* PersonGridCollectionViewCellViewModel.swift */; };
 		DD17AD592482AA3B005499A7 /* PersonListCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17AD582482AA3B005499A7 /* PersonListCollectionViewCellViewModel.swift */; };
 		DD17AD602482AE7B005499A7 /* PeopleCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17AD5F2482AE7B005499A7 /* PeopleCollectionViewDelegate.swift */; };
-		DD17AD632482CE27005499A7 /* PeopleCollectionViewGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17AD622482CE27005499A7 /* PeopleCollectionViewGridLayout.swift */; };
 		DD6BD5362481292F00DAD0C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6BD5352481292F00DAD0C0 /* AppDelegate.swift */; };
 		DD6BD53D2481292F00DAD0C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6BD53B2481292F00DAD0C0 /* Main.storyboard */; };
 		DD6BD53F2481293100DAD0C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD6BD53E2481293100DAD0C0 /* Assets.xcassets */; };
@@ -36,6 +35,8 @@
 		DD98B15F2481318B00FB9864 /* DataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD98B15E2481318B00FB9864 /* DataGenerator.swift */; };
 		DD98B1612481328500FB9864 /* DataWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD98B1602481328500FB9864 /* DataWorker.swift */; };
 		DD98B1632481369600FB9864 /* PersonsWarehouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD98B1622481369600FB9864 /* PersonsWarehouse.swift */; };
+		DDAA738824835C4A00BDCDFC /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAA738724835C4A00BDCDFC /* AlertHandler.swift */; };
+		DDAA738A24835D9600BDCDFC /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAA738924835D9600BDCDFC /* Protocols.swift */; };
 		DDFE90E624816DE900FE092A /* PersonListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFE90E524816DE900FE092A /* PersonListCollectionViewCell.swift */; };
 		DDFE90E924816DFC00FE092A /* PersonGridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFE90E724816DFC00FE092A /* PersonGridCollectionViewCell.swift */; };
 		DDFE90ED2481759600FE092A /* UICollectionViewCell+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFE90EC2481759600FE092A /* UICollectionViewCell+ReuseIdentifier.swift */; };
@@ -66,7 +67,6 @@
 		DD17AD562482A9A3005499A7 /* PersonGridCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonGridCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		DD17AD582482AA3B005499A7 /* PersonListCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		DD17AD5F2482AE7B005499A7 /* PeopleCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCollectionViewDelegate.swift; sourceTree = "<group>"; };
-		DD17AD622482CE27005499A7 /* PeopleCollectionViewGridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCollectionViewGridLayout.swift; sourceTree = "<group>"; };
 		DD6BD5322481292F00DAD0C0 /* Readdle 2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Readdle 2020.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD6BD5352481292F00DAD0C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD6BD53C2481292F00DAD0C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -79,6 +79,8 @@
 		DD98B15E2481318B00FB9864 /* DataGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGenerator.swift; sourceTree = "<group>"; };
 		DD98B1602481328500FB9864 /* DataWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWorker.swift; sourceTree = "<group>"; };
 		DD98B1622481369600FB9864 /* PersonsWarehouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsWarehouse.swift; sourceTree = "<group>"; };
+		DDAA738724835C4A00BDCDFC /* AlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
+		DDAA738924835D9600BDCDFC /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		DDFE90E524816DE900FE092A /* PersonListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListCollectionViewCell.swift; sourceTree = "<group>"; };
 		DDFE90E724816DFC00FE092A /* PersonGridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonGridCollectionViewCell.swift; sourceTree = "<group>"; };
 		DDFE90EC2481759600FE092A /* UICollectionViewCell+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+ReuseIdentifier.swift"; sourceTree = "<group>"; };
@@ -157,7 +159,6 @@
 			children = (
 				DD17AD542482A7E4005499A7 /* PeopleCollectionViewDataSource.swift */,
 				DD17AD5F2482AE7B005499A7 /* PeopleCollectionViewDelegate.swift */,
-				DD17AD622482CE27005499A7 /* PeopleCollectionViewGridLayout.swift */,
 			);
 			path = "People Collection View Utils";
 			sourceTree = "<group>";
@@ -237,15 +238,17 @@
 		DD98B15B2481300B00FB9864 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				DD17AD612482CE08005499A7 /* People Collection View Utils */,
+				DDAA738724835C4A00BDCDFC /* AlertHandler.swift */,
 				DD17AD412482695E005499A7 /* CryptoHandler.swift */,
 				DD98B15E2481318B00FB9864 /* DataGenerator.swift */,
 				DD98B1602481328500FB9864 /* DataWorker.swift */,
 				DD17AD4324826DF7005499A7 /* DownloadManager.swift */,
 				DD17AD4A248288A4005499A7 /* ImageCache.swift */,
+				DD17AD612482CE08005499A7 /* People Collection View Utils */,
 				DD98B15C2481301F00FB9864 /* PersonFactory.swift */,
 				DD98B1622481369600FB9864 /* PersonsWarehouse.swift */,
 				DD17AD3F248266DC005499A7 /* URLBuilder.swift */,
+				DDAA738924835D9600BDCDFC /* Protocols.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -419,14 +422,15 @@
 				DD98B15824812C1D00FB9864 /* Person.swift in Sources */,
 				DD17AD51248296E3005499A7 /* String+CapitalizeFirstLetter.swift in Sources */,
 				DDFE90F32482584C00FE092A /* Coordinator.swift in Sources */,
+				DDAA738824835C4A00BDCDFC /* AlertHandler.swift in Sources */,
 				DDFE90F52482587400FE092A /* PeopleCoordinator.swift in Sources */,
 				DD17AD572482A9A3005499A7 /* PersonGridCollectionViewCellViewModel.swift in Sources */,
 				DD17AD4D24829574005499A7 /* PeopleView.swift in Sources */,
 				DD17AD40248266DC005499A7 /* URLBuilder.swift in Sources */,
 				DDFE90FB2482597000FE092A /* DetailedInfoViewController.swift in Sources */,
 				DD17AD592482AA3B005499A7 /* PersonListCollectionViewCellViewModel.swift in Sources */,
-				DD17AD632482CE27005499A7 /* PeopleCollectionViewGridLayout.swift in Sources */,
 				DD6BD5362481292F00DAD0C0 /* AppDelegate.swift in Sources */,
+				DDAA738A24835D9600BDCDFC /* Protocols.swift in Sources */,
 				DD17AD4B248288A4005499A7 /* ImageCache.swift in Sources */,
 				DD17AD3E24826526005499A7 /* CustomError.swift in Sources */,
 				DDFE90F92482590300FE092A /* PeopleViewController.swift in Sources */,

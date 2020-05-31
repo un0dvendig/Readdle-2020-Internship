@@ -32,6 +32,10 @@ class PersonGridCollectionViewCell: UICollectionViewCell {
         return view
     }()
     
+    // MARK: - Properties
+    
+    var alertHandler: AlertHandler?
+    
     // MARK: - Initialization
     
     override init(frame: CGRect) {
@@ -59,16 +63,18 @@ class PersonGridCollectionViewCell: UICollectionViewCell {
                         self.personAvatarLoadingActivityIndicatorView.stopAnimating()
                     }
                 case .failure(let error):
-                    // TODO: Handle errors!
-                    print("An error accured while loading image: \(error)")
+                    let title = "An error occurred while loading image"
+                    self.alertHandler?.showAlertDialog(title: title, message: error.localizedDescription)
                     DispatchQueue.main.async {
                         self.personAvatarLoadingActivityIndicatorView.stopAnimating()
                     }
                 }
             }
         } else {
-            // Has no image url.
-            // TODO: Handle errors!
+            // The Person for some reason has no image url.
+            let error = CustomError.cannotCreateImageURL
+            let title = "The Person has invalid email"
+            self.alertHandler?.showAlertDialog(title: title, message: error.localizedDescription)
             personAvatarLoadingActivityIndicatorView.stopAnimating()
         }
     }

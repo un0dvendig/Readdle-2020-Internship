@@ -16,6 +16,7 @@ class PeopleViewController: UIViewController {
     
     // MARK: - Private properties
     
+    private var alertHandler: AlertHandler?
     private var viewModelReference: PeopleViewModel?
     private var collectionViewDataSource: UICollectionViewDataSource?
     private var collectionViewDelegate: UICollectionViewDelegate?
@@ -54,9 +55,11 @@ class PeopleViewController: UIViewController {
     // MARK: - Private methods
     
     private func setupViewModel() {
-
+        self.alertHandler = AlertHandler(delegate: self)
+        
         var viewModel = PeopleViewModel()
         viewModel.coordinatorReference = coordinator
+        viewModel.alertHandlerReference = alertHandler
         self.viewModelReference = viewModel
         
         if let view = self.view as? PeopleView {
