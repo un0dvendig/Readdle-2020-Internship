@@ -1,0 +1,20 @@
+PODS:
+  - Fakery (4.1.1)
+  - SwiftHash (2.0.2)
+
+DEPENDENCIES:
+  - Fakery
+  - SwiftHash
+
+SPEC REPOS:
+  trunk:
+    - Fakery
+    - SwiftHash
+
+SPEC CHECKSUMS:
+  Fakery: d3380c4aa1efe7631c0831d7e26aa9db4491f014
+  SwiftHash: 6d312abe61c8359bdef8d0093642f3a70b1c17ba
+
+PODFILE CHECKSUM: ade37fe16b5e95907b6baa586c9258c9e0d4d250
+
+COCOAPODS: 1.9.1

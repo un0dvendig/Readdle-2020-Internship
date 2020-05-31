@@ -3,25 +3,89 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		804CC57C51C19B77BFC2ACC3 /* Pods_Readdle_2020.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F7CEE458E7F7CE2658A7BB /* Pods_Readdle_2020.framework */; };
+		DD17AD3924825B95005499A7 /* DetailedInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17AD3824825B95005499A7 /* DetailedInfoView.swift */; };
+		DD17AD3B248262D3005499A7 /* DetailedInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17AD3A248262D3005499A7 /* DetailedInfoViewModel.swift */; };
+		DD17AD3E24826526005499A7 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17AD3D24826526005499A7 /* CustomError.swift */; };
+		DD17AD40248266DC005499A7 /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17AD3F248266DC005499A7 /* URLBuilder.swift */; };
+		DD17AD422482695E005499A7 /* CryptoHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17AD412482695E005499A7 /* CryptoHandler.swift */; };
+		DD17AD4424826DF7005499A7 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17AD4324826DF7005499A7 /* DownloadManager.swift */; };
+		DD17AD4624826FA2005499A7 /* HTTPURLResponse+HasSuccessStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17AD4524826FA2005499A7 /* HTTPURLResponse+HasSuccessStatusCode.swift */; };
+		DD17AD49248285FA005499A7 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17AD48248285FA005499A7 /* AsyncImageView.swift */; };
+		DD17AD4B248288A4005499A7 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17AD4A248288A4005499A7 /* ImageCache.swift */; };
+		DD17AD4D24829574005499A7 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17AD4C24829574005499A7 /* PeopleView.swift */; };
+		DD17AD4F248295FA005499A7 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17AD4E248295FA005499A7 /* Enums.swift */; };
+		DD17AD51248296E3005499A7 /* String+CapitalizeFirstLetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17AD50248296E3005499A7 /* String+CapitalizeFirstLetter.swift */; };
+		DD17AD532482A511005499A7 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17AD522482A511005499A7 /* PeopleViewModel.swift */; };
+		DD17AD552482A7E4005499A7 /* PeopleCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17AD542482A7E4005499A7 /* PeopleCollectionViewDataSource.swift */; };
+		DD17AD572482A9A3005499A7 /* PersonGridCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17AD562482A9A3005499A7 /* PersonGridCollectionViewCellViewModel.swift */; };
+		DD17AD592482AA3B005499A7 /* PersonListCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17AD582482AA3B005499A7 /* PersonListCollectionViewCellViewModel.swift */; };
+		DD17AD602482AE7B005499A7 /* PeopleCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17AD5F2482AE7B005499A7 /* PeopleCollectionViewDelegate.swift */; };
+		DD17AD632482CE27005499A7 /* PeopleCollectionViewGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17AD622482CE27005499A7 /* PeopleCollectionViewGridLayout.swift */; };
 		DD6BD5362481292F00DAD0C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6BD5352481292F00DAD0C0 /* AppDelegate.swift */; };
-		DD6BD53A2481292F00DAD0C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6BD5392481292F00DAD0C0 /* ViewController.swift */; };
 		DD6BD53D2481292F00DAD0C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6BD53B2481292F00DAD0C0 /* Main.storyboard */; };
 		DD6BD53F2481293100DAD0C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD6BD53E2481293100DAD0C0 /* Assets.xcassets */; };
 		DD6BD5422481293100DAD0C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6BD5402481293100DAD0C0 /* LaunchScreen.storyboard */; };
+		DD98B15824812C1D00FB9864 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD98B15724812C1D00FB9864 /* Person.swift */; };
+		DD98B15A24812DD700FB9864 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD98B15924812DD700FB9864 /* Status.swift */; };
+		DD98B15D2481301F00FB9864 /* PersonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD98B15C2481301F00FB9864 /* PersonFactory.swift */; };
+		DD98B15F2481318B00FB9864 /* DataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD98B15E2481318B00FB9864 /* DataGenerator.swift */; };
+		DD98B1612481328500FB9864 /* DataWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD98B1602481328500FB9864 /* DataWorker.swift */; };
+		DD98B1632481369600FB9864 /* PersonsWarehouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD98B1622481369600FB9864 /* PersonsWarehouse.swift */; };
+		DDFE90E624816DE900FE092A /* PersonListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFE90E524816DE900FE092A /* PersonListCollectionViewCell.swift */; };
+		DDFE90E924816DFC00FE092A /* PersonGridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFE90E724816DFC00FE092A /* PersonGridCollectionViewCell.swift */; };
+		DDFE90ED2481759600FE092A /* UICollectionViewCell+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFE90EC2481759600FE092A /* UICollectionViewCell+ReuseIdentifier.swift */; };
+		DDFE90F32482584C00FE092A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFE90F22482584C00FE092A /* Coordinator.swift */; };
+		DDFE90F52482587400FE092A /* PeopleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFE90F42482587400FE092A /* PeopleCoordinator.swift */; };
+		DDFE90F92482590300FE092A /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFE90F82482590300FE092A /* PeopleViewController.swift */; };
+		DDFE90FB2482597000FE092A /* DetailedInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFE90FA2482597000FE092A /* DetailedInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		78DC7C959E0874BFA7108F09 /* Pods-Readdle 2020.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Readdle 2020.release.xcconfig"; path = "Target Support Files/Pods-Readdle 2020/Pods-Readdle 2020.release.xcconfig"; sourceTree = "<group>"; };
+		84F7CEE458E7F7CE2658A7BB /* Pods_Readdle_2020.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Readdle_2020.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2C13605E0CDD9E4EC997EDB /* Pods-Readdle 2020.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Readdle 2020.debug.xcconfig"; path = "Target Support Files/Pods-Readdle 2020/Pods-Readdle 2020.debug.xcconfig"; sourceTree = "<group>"; };
+		DD17AD3824825B95005499A7 /* DetailedInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedInfoView.swift; sourceTree = "<group>"; };
+		DD17AD3A248262D3005499A7 /* DetailedInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedInfoViewModel.swift; sourceTree = "<group>"; };
+		DD17AD3D24826526005499A7 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		DD17AD3F248266DC005499A7 /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
+		DD17AD412482695E005499A7 /* CryptoHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoHandler.swift; sourceTree = "<group>"; };
+		DD17AD4324826DF7005499A7 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		DD17AD4524826FA2005499A7 /* HTTPURLResponse+HasSuccessStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+HasSuccessStatusCode.swift"; sourceTree = "<group>"; };
+		DD17AD48248285FA005499A7 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		DD17AD4A248288A4005499A7 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		DD17AD4C24829574005499A7 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
+		DD17AD4E248295FA005499A7 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		DD17AD50248296E3005499A7 /* String+CapitalizeFirstLetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+CapitalizeFirstLetter.swift"; sourceTree = "<group>"; };
+		DD17AD522482A511005499A7 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
+		DD17AD542482A7E4005499A7 /* PeopleCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		DD17AD562482A9A3005499A7 /* PersonGridCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonGridCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		DD17AD582482AA3B005499A7 /* PersonListCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		DD17AD5F2482AE7B005499A7 /* PeopleCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		DD17AD622482CE27005499A7 /* PeopleCollectionViewGridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCollectionViewGridLayout.swift; sourceTree = "<group>"; };
 		DD6BD5322481292F00DAD0C0 /* Readdle 2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Readdle 2020.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD6BD5352481292F00DAD0C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DD6BD5392481292F00DAD0C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DD6BD53C2481292F00DAD0C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD6BD53E2481293100DAD0C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD6BD5412481293100DAD0C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD6BD5432481293100DAD0C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD98B15724812C1D00FB9864 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		DD98B15924812DD700FB9864 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		DD98B15C2481301F00FB9864 /* PersonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonFactory.swift; sourceTree = "<group>"; };
+		DD98B15E2481318B00FB9864 /* DataGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGenerator.swift; sourceTree = "<group>"; };
+		DD98B1602481328500FB9864 /* DataWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWorker.swift; sourceTree = "<group>"; };
+		DD98B1622481369600FB9864 /* PersonsWarehouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsWarehouse.swift; sourceTree = "<group>"; };
+		DDFE90E524816DE900FE092A /* PersonListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListCollectionViewCell.swift; sourceTree = "<group>"; };
+		DDFE90E724816DFC00FE092A /* PersonGridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonGridCollectionViewCell.swift; sourceTree = "<group>"; };
+		DDFE90EC2481759600FE092A /* UICollectionViewCell+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+ReuseIdentifier.swift"; sourceTree = "<group>"; };
+		DDFE90F22482584C00FE092A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DDFE90F42482587400FE092A /* PeopleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCoordinator.swift; sourceTree = "<group>"; };
+		DDFE90F82482590300FE092A /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		DDFE90FA2482597000FE092A /* DetailedInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +93,82 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				804CC57C51C19B77BFC2ACC3 /* Pods_Readdle_2020.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		194F4A6FED4B11E27F826F54 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D2C13605E0CDD9E4EC997EDB /* Pods-Readdle 2020.debug.xcconfig */,
+				78DC7C959E0874BFA7108F09 /* Pods-Readdle 2020.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		81B6F1EBE0D244DF5286F46B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84F7CEE458E7F7CE2658A7BB /* Pods_Readdle_2020.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD17AD3624825AF7005499A7 /* People View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DDFE90E524816DE900FE092A /* PersonListCollectionViewCell.swift */,
+				DDFE90E724816DFC00FE092A /* PersonGridCollectionViewCell.swift */,
+				DD17AD4C24829574005499A7 /* PeopleView.swift */,
+			);
+			path = "People View Controller";
+			sourceTree = "<group>";
+		};
+		DD17AD3724825AFF005499A7 /* Detailed Info View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DD17AD3824825B95005499A7 /* DetailedInfoView.swift */,
+			);
+			path = "Detailed Info View Controller";
+			sourceTree = "<group>";
+		};
+		DD17AD3C2482651F005499A7 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				DD17AD3D24826526005499A7 /* CustomError.swift */,
+				DD17AD4E248295FA005499A7 /* Enums.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		DD17AD47248285E0005499A7 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				DD17AD48248285FA005499A7 /* AsyncImageView.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		DD17AD612482CE08005499A7 /* People Collection View Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DD17AD542482A7E4005499A7 /* PeopleCollectionViewDataSource.swift */,
+				DD17AD5F2482AE7B005499A7 /* PeopleCollectionViewDelegate.swift */,
+				DD17AD622482CE27005499A7 /* PeopleCollectionViewGridLayout.swift */,
+			);
+			path = "People Collection View Utils";
+			sourceTree = "<group>";
+		};
 		DD6BD5292481292F00DAD0C0 = {
 			isa = PBXGroup;
 			children = (
 				DD6BD5342481292F00DAD0C0 /* Readdle 2020 */,
 				DD6BD5332481292F00DAD0C0 /* Products */,
+				194F4A6FED4B11E27F826F54 /* Pods */,
+				81B6F1EBE0D244DF5286F46B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,9 +183,17 @@
 		DD6BD5342481292F00DAD0C0 /* Readdle 2020 */ = {
 			isa = PBXGroup;
 			children = (
+				DDFE90FC24825A7F00FE092A /* AppDelegate */,
+				DD17AD3C2482651F005499A7 /* Constants */,
+				DDFE90F12482584200FE092A /* Coordinators */,
+				DDFE90EB2481758600FE092A /* Extensions */,
+				DD98B15624812C0800FB9864 /* Models */,
 				DD6BD5492481299B00DAD0C0 /* Resources */,
 				DD6BD54A248129AB00DAD0C0 /* Storyboards */,
+				DD98B15B2481300B00FB9864 /* Utils */,
 				DD6BD54B248129B100DAD0C0 /* View controllers */,
+				DDFE90EE24824C5200FE092A /* View models */,
+				DDFE90E424816DA900FE092A /* Views */,
 			);
 			path = "Readdle 2020";
 			sourceTree = "<group>";
@@ -64,7 +201,6 @@
 		DD6BD5492481299B00DAD0C0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DD6BD5352481292F00DAD0C0 /* AppDelegate.swift */,
 				DD6BD53E2481293100DAD0C0 /* Assets.xcassets */,
 				DD6BD5432481293100DAD0C0 /* Info.plist */,
 			);
@@ -83,9 +219,83 @@
 		DD6BD54B248129B100DAD0C0 /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DD6BD5392481292F00DAD0C0 /* ViewController.swift */,
+				DDFE90F82482590300FE092A /* PeopleViewController.swift */,
+				DDFE90FA2482597000FE092A /* DetailedInfoViewController.swift */,
 			);
 			path = "View controllers";
+			sourceTree = "<group>";
+		};
+		DD98B15624812C0800FB9864 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DD98B15724812C1D00FB9864 /* Person.swift */,
+				DD98B15924812DD700FB9864 /* Status.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DD98B15B2481300B00FB9864 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DD17AD612482CE08005499A7 /* People Collection View Utils */,
+				DD17AD412482695E005499A7 /* CryptoHandler.swift */,
+				DD98B15E2481318B00FB9864 /* DataGenerator.swift */,
+				DD98B1602481328500FB9864 /* DataWorker.swift */,
+				DD17AD4324826DF7005499A7 /* DownloadManager.swift */,
+				DD17AD4A248288A4005499A7 /* ImageCache.swift */,
+				DD98B15C2481301F00FB9864 /* PersonFactory.swift */,
+				DD98B1622481369600FB9864 /* PersonsWarehouse.swift */,
+				DD17AD3F248266DC005499A7 /* URLBuilder.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DDFE90E424816DA900FE092A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DD17AD47248285E0005499A7 /* Custom Views */,
+				DD17AD3724825AFF005499A7 /* Detailed Info View Controller */,
+				DD17AD3624825AF7005499A7 /* People View Controller */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DDFE90EB2481758600FE092A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DDFE90EC2481759600FE092A /* UICollectionViewCell+ReuseIdentifier.swift */,
+				DD17AD4524826FA2005499A7 /* HTTPURLResponse+HasSuccessStatusCode.swift */,
+				DD17AD50248296E3005499A7 /* String+CapitalizeFirstLetter.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DDFE90EE24824C5200FE092A /* View models */ = {
+			isa = PBXGroup;
+			children = (
+				DD17AD3A248262D3005499A7 /* DetailedInfoViewModel.swift */,
+				DD17AD522482A511005499A7 /* PeopleViewModel.swift */,
+				DD17AD562482A9A3005499A7 /* PersonGridCollectionViewCellViewModel.swift */,
+				DD17AD582482AA3B005499A7 /* PersonListCollectionViewCellViewModel.swift */,
+			);
+			path = "View models";
+			sourceTree = "<group>";
+		};
+		DDFE90F12482584200FE092A /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				DDFE90F22482584C00FE092A /* Coordinator.swift */,
+				DDFE90F42482587400FE092A /* PeopleCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		DDFE90FC24825A7F00FE092A /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				DD6BD5352481292F00DAD0C0 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,9 +305,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD6BD5462481293100DAD0C0 /* Build configuration list for PBXNativeTarget "Readdle 2020" */;
 			buildPhases = (
+				552F44A2225701B4750769D1 /* [CP] Check Pods Manifest.lock */,
 				DD6BD52E2481292F00DAD0C0 /* Sources */,
 				DD6BD52F2481292F00DAD0C0 /* Frameworks */,
 				DD6BD5302481292F00DAD0C0 /* Resources */,
+				1CE6714829A0C99658575E49 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,13 +366,85 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1CE6714829A0C99658575E49 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Readdle 2020/Pods-Readdle 2020-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Readdle 2020/Pods-Readdle 2020-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Readdle 2020/Pods-Readdle 2020-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		552F44A2225701B4750769D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Readdle 2020-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DD6BD52E2481292F00DAD0C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD6BD53A2481292F00DAD0C0 /* ViewController.swift in Sources */,
+				DD17AD3B248262D3005499A7 /* DetailedInfoViewModel.swift in Sources */,
+				DD17AD49248285FA005499A7 /* AsyncImageView.swift in Sources */,
+				DD17AD4424826DF7005499A7 /* DownloadManager.swift in Sources */,
+				DD98B15824812C1D00FB9864 /* Person.swift in Sources */,
+				DD17AD51248296E3005499A7 /* String+CapitalizeFirstLetter.swift in Sources */,
+				DDFE90F32482584C00FE092A /* Coordinator.swift in Sources */,
+				DDFE90F52482587400FE092A /* PeopleCoordinator.swift in Sources */,
+				DD17AD572482A9A3005499A7 /* PersonGridCollectionViewCellViewModel.swift in Sources */,
+				DD17AD4D24829574005499A7 /* PeopleView.swift in Sources */,
+				DD17AD40248266DC005499A7 /* URLBuilder.swift in Sources */,
+				DDFE90FB2482597000FE092A /* DetailedInfoViewController.swift in Sources */,
+				DD17AD592482AA3B005499A7 /* PersonListCollectionViewCellViewModel.swift in Sources */,
+				DD17AD632482CE27005499A7 /* PeopleCollectionViewGridLayout.swift in Sources */,
 				DD6BD5362481292F00DAD0C0 /* AppDelegate.swift in Sources */,
+				DD17AD4B248288A4005499A7 /* ImageCache.swift in Sources */,
+				DD17AD3E24826526005499A7 /* CustomError.swift in Sources */,
+				DDFE90F92482590300FE092A /* PeopleViewController.swift in Sources */,
+				DD98B15F2481318B00FB9864 /* DataGenerator.swift in Sources */,
+				DD98B1612481328500FB9864 /* DataWorker.swift in Sources */,
+				DD17AD4F248295FA005499A7 /* Enums.swift in Sources */,
+				DD98B15D2481301F00FB9864 /* PersonFactory.swift in Sources */,
+				DDFE90ED2481759600FE092A /* UICollectionViewCell+ReuseIdentifier.swift in Sources */,
+				DD17AD422482695E005499A7 /* CryptoHandler.swift in Sources */,
+				DD17AD3924825B95005499A7 /* DetailedInfoView.swift in Sources */,
+				DD17AD602482AE7B005499A7 /* PeopleCollectionViewDelegate.swift in Sources */,
+				DD98B1632481369600FB9864 /* PersonsWarehouse.swift in Sources */,
+				DDFE90E924816DFC00FE092A /* PersonGridCollectionViewCell.swift in Sources */,
+				DD17AD552482A7E4005499A7 /* PeopleCollectionViewDataSource.swift in Sources */,
+				DD98B15A24812DD700FB9864 /* Status.swift in Sources */,
+				DD17AD532482A511005499A7 /* PeopleViewModel.swift in Sources */,
+				DD17AD4624826FA2005499A7 /* HTTPURLResponse+HasSuccessStatusCode.swift in Sources */,
+				DDFE90E624816DE900FE092A /* PersonListCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +586,7 @@
 		};
 		DD6BD5472481293100DAD0C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2C13605E0CDD9E4EC997EDB /* Pods-Readdle 2020.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -321,6 +606,7 @@
 		};
 		DD6BD5482481293100DAD0C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78DC7C959E0874BFA7108F09 /* Pods-Readdle 2020.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
