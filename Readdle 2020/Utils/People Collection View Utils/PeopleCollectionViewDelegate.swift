@@ -37,8 +37,9 @@ extension PeopleCollectionViewDelegate: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch currentLayout {
         case .list:
-            let safeAreaWidth = collectionView.safeAreaLayoutGuide.layoutFrame.width
-            return CGSize(width: safeAreaWidth, height: 50)
+            let width = collectionView.bounds.width - 20
+            print()
+            return CGSize(width: width, height: 50)
         case .grid:
             return CGSize(width: 50, height: 50)
         }

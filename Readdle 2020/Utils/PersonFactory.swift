@@ -33,15 +33,16 @@ class PersonFactory {
         return person
     }
     
-    /// Returns a randomly generated Person, that has .uknown status.
+    /// Returns a randomly generated Person.
     func createRandomPerson() -> Person {
         let name = dataGenerator.generateName()
         let email = dataGenerator.generateEmail()
-        let person = Person(name: name, email: email, status: .unknown)
+        let status: Status = Status.allCases.randomElement() ?? .unknown
+        let person = Person(name: name, email: email, status: status)
         return person
     }
     
-    /// Returns an array of randomly generated Persons with .unknown status.
+    /// Returns an array of randomly generated Persons .
     func createRandomPersons(numberOfPersonsToCreate number: Int) -> [Person] {
         var persons: [Person] = []
         guard number > 0 else {

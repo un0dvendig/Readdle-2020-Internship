@@ -104,9 +104,9 @@ class PersonListCollectionViewCell: UICollectionViewCell {
         personAvatarImageView.translatesAutoresizingMaskIntoConstraints = false
         /// Puts `personAvatarImageView` in the left part of the safe area.
         NSLayoutConstraint.activate([
-            personAvatarImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 5),
-            personAvatarImageView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 5),
-            personAvatarImageView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 10),
+            personAvatarImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            personAvatarImageView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            personAvatarImageView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             personAvatarImageView.widthAnchor.constraint(equalTo: personAvatarImageView.heightAnchor, multiplier: 1)
         ])
     }
@@ -146,7 +146,7 @@ class PersonListCollectionViewCell: UICollectionViewCell {
         /// Puts `personNameLabel` in the right area of the cell.
         NSLayoutConstraint.activate([
             personNameLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 5),
-            personNameLabel.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 5),
+            personNameLabel.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -5),
             personNameLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -10),
             personNameLabel.leadingAnchor.constraint(equalTo: personAvatarImageView.trailingAnchor, constant: 10)
         ])

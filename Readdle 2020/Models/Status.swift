@@ -6,7 +6,7 @@
 //  Copyright © 2020 Eugene Ilyin. All rights reserved.
 //
 
-enum Status: String {
+enum Status: String, CaseIterable {
     case online
     case offline
     case unknown

@@ -25,7 +25,7 @@ class PersonsWarehouse {
     
     private init() {
         self.personFactory = PersonFactory.shared
-        self.persons = personFactory.createRandomPersons(numberOfPersonsToCreate: 30)
+        self.persons = personFactory.createRandomPersons(numberOfPersonsToCreate: 100)
     }
     
     // MARK: - Computed properties
@@ -45,7 +45,7 @@ class PersonsWarehouse {
         return availablePersons
     }
     
-    /// Return a Person entity at given index. If no found, returns nil.
+    /// Returns a Person entity at given index. If no found, returns nil.
     func getPerson(at index: Int) -> Person? {
         guard index < persons.count else {
             return nil
@@ -65,10 +65,43 @@ class PersonsWarehouse {
         }
     }
     
+    /// Adds the Person to the array of available Person entities.
+    func addPerson(_ person: Person) {
+        queue.async(flags: .barrier) {
+            self.persons.append(person)
+        }
+    }
+    
+    /// Replaces a Person entity at given index with the given Person.
+    /// If the index is out of range, nothing will happen.
+    func changePerson(at index: Int, to person: Person) {
+        guard index < persons.count else {
+            return
+        }
+        queue.async(flags: .barrier) {
+            self.persons[index] = person
+        }
+    }
+    
+    /// Changes Person entity info at given index with the given info.
+    /// If the index is out of range, nothing will happen.
+    func changePersonInfo(atIndex index: Int, name: String, email: String, status: Status) {
+        guard index < persons.count else {
+            return
+        }
+        queue.async(flags: .barrier) {
+            let person = self.persons[index]
+            person.name = name
+            person.email = email
+            person.status = status
+            self.persons[index] = person
+        }
+    }
+    
     /// Deletes random Person entity.
     func deleteRandomPerson() {
-        let randomIndex = Int(arc4random_uniform(UInt32(self.persons.count)))
         queue.async(flags: .barrier) {
+            let randomIndex = Int(arc4random_uniform(UInt32(self.persons.count)))
             self.persons.remove(at: randomIndex)
         }
     }
@@ -81,5 +114,37 @@ class PersonsWarehouse {
     }
     
     // TODO: - Add method for "Simulate changes" button.
-    
+    func simulateChanges() {
+        self.shufflePersons()
+        
+        let numberOfDeletions = Int.random(in: 1...10)
+        let numberOfAdditions = Int.random(in: 1...10)
+        let numberOfReplacements = Int.random(in: (persons.count / 2)...persons.count)
+        let numberOfInfoChange = Int.random(in: 1...10)
+        
+        for _ in 0..<numberOfDeletions {
+            self.deleteRandomPerson()
+        }
+        
+        for _ in 0..<numberOfAdditions {
+            self.addRandomPerson()
+        }
+        
+        for _ in 0..<numberOfReplacements {
+            let randomNumber = Int.random(in: 1...persons.count)
+            let person = PersonFactory.shared.createRandomPerson()
+            self.changePerson(at: randomNumber, to: person)
+        }
+        
+        for _ in 0..<numberOfInfoChange {
+            let randomNumber = Int.random(in: 1...persons.count)
+            let randomPerson = PersonFactory.shared.createRandomPerson()
+            self.changePersonInfo(atIndex: randomNumber,
+                                  name: randomPerson.name,
+                                  email: randomPerson.email,
+                                  status: randomPerson.status)
+        }
+        
+        self.shufflePersons()
+    }
 }

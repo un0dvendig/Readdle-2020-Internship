@@ -81,7 +81,7 @@ class PeopleViewController: UIViewController {
     @objc
     private func didPressSimulateChanges(_ sender: UIButton) {
         if let view = self.view as? PeopleView {
-            PersonsWarehouse.shared.shufflePersons()
+            PersonsWarehouse.shared.simulateChanges()
             DispatchQueue.main.async {
                 view.peopleCollectionView.reloadData()
             }
