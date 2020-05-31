@@ -37,6 +37,8 @@
 		DD98B1632481369600FB9864 /* PersonsWarehouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD98B1622481369600FB9864 /* PersonsWarehouse.swift */; };
 		DDAA738824835C4A00BDCDFC /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAA738724835C4A00BDCDFC /* AlertHandler.swift */; };
 		DDAA738A24835D9600BDCDFC /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAA738924835D9600BDCDFC /* Protocols.swift */; };
+		DDAA73922483740900BDCDFC /* Readdle_2020_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAA73912483740900BDCDFC /* Readdle_2020_Tests.swift */; };
+		DDAA739A248377C000BDCDFC /* Person+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAA7399248377C000BDCDFC /* Person+Equatable.swift */; };
 		DDFE90E624816DE900FE092A /* PersonListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFE90E524816DE900FE092A /* PersonListCollectionViewCell.swift */; };
 		DDFE90E924816DFC00FE092A /* PersonGridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFE90E724816DFC00FE092A /* PersonGridCollectionViewCell.swift */; };
 		DDFE90ED2481759600FE092A /* UICollectionViewCell+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFE90EC2481759600FE092A /* UICollectionViewCell+ReuseIdentifier.swift */; };
@@ -45,6 +47,16 @@
 		DDFE90F92482590300FE092A /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFE90F82482590300FE092A /* PeopleViewController.swift */; };
 		DDFE90FB2482597000FE092A /* DetailedInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFE90FA2482597000FE092A /* DetailedInfoViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DDAA73942483740900BDCDFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD6BD52A2481292F00DAD0C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD6BD5312481292F00DAD0C0;
+			remoteInfo = "Readdle 2020";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		78DC7C959E0874BFA7108F09 /* Pods-Readdle 2020.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Readdle 2020.release.xcconfig"; path = "Target Support Files/Pods-Readdle 2020/Pods-Readdle 2020.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +93,10 @@
 		DD98B1622481369600FB9864 /* PersonsWarehouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsWarehouse.swift; sourceTree = "<group>"; };
 		DDAA738724835C4A00BDCDFC /* AlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
 		DDAA738924835D9600BDCDFC /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		DDAA738F2483740900BDCDFC /* Readdle 2020 Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Readdle 2020 Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDAA73912483740900BDCDFC /* Readdle_2020_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Readdle_2020_Tests.swift; sourceTree = "<group>"; };
+		DDAA73932483740900BDCDFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDAA7399248377C000BDCDFC /* Person+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+Equatable.swift"; sourceTree = "<group>"; };
 		DDFE90E524816DE900FE092A /* PersonListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListCollectionViewCell.swift; sourceTree = "<group>"; };
 		DDFE90E724816DFC00FE092A /* PersonGridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonGridCollectionViewCell.swift; sourceTree = "<group>"; };
 		DDFE90EC2481759600FE092A /* UICollectionViewCell+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+ReuseIdentifier.swift"; sourceTree = "<group>"; };
@@ -96,6 +112,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				804CC57C51C19B77BFC2ACC3 /* Pods_Readdle_2020.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDAA738C2483740900BDCDFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				DD6BD5342481292F00DAD0C0 /* Readdle 2020 */,
+				DDAA73902483740900BDCDFC /* Readdle 2020 Tests */,
 				DD6BD5332481292F00DAD0C0 /* Products */,
 				194F4A6FED4B11E27F826F54 /* Pods */,
 				81B6F1EBE0D244DF5286F46B /* Frameworks */,
@@ -177,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				DD6BD5322481292F00DAD0C0 /* Readdle 2020.app */,
+				DDAA738F2483740900BDCDFC /* Readdle 2020 Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -253,6 +278,16 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		DDAA73902483740900BDCDFC /* Readdle 2020 Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DDAA7399248377C000BDCDFC /* Person+Equatable.swift */,
+				DDAA73912483740900BDCDFC /* Readdle_2020_Tests.swift */,
+				DDAA73932483740900BDCDFC /* Info.plist */,
+			);
+			path = "Readdle 2020 Tests";
+			sourceTree = "<group>";
+		};
 		DDFE90E424816DA900FE092A /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +358,24 @@
 			productReference = DD6BD5322481292F00DAD0C0 /* Readdle 2020.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DDAA738E2483740900BDCDFC /* Readdle 2020 Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDAA73962483740900BDCDFC /* Build configuration list for PBXNativeTarget "Readdle 2020 Tests" */;
+			buildPhases = (
+				DDAA738B2483740900BDCDFC /* Sources */,
+				DDAA738C2483740900BDCDFC /* Frameworks */,
+				DDAA738D2483740900BDCDFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DDAA73952483740900BDCDFC /* PBXTargetDependency */,
+			);
+			name = "Readdle 2020 Tests";
+			productName = "Readdle 2020 Tests";
+			productReference = DDAA738F2483740900BDCDFC /* Readdle 2020 Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -335,6 +388,10 @@
 				TargetAttributes = {
 					DD6BD5312481292F00DAD0C0 = {
 						CreatedOnToolsVersion = 11.5;
+					};
+					DDAA738E2483740900BDCDFC = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = DD6BD5312481292F00DAD0C0;
 					};
 				};
 			};
@@ -352,6 +409,7 @@
 			projectRoot = "";
 			targets = (
 				DD6BD5312481292F00DAD0C0 /* Readdle 2020 */,
+				DDAA738E2483740900BDCDFC /* Readdle 2020 Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -364,6 +422,13 @@
 				DD6BD5422481293100DAD0C0 /* LaunchScreen.storyboard in Resources */,
 				DD6BD53F2481293100DAD0C0 /* Assets.xcassets in Resources */,
 				DD6BD53D2481292F00DAD0C0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDAA738D2483740900BDCDFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,7 +517,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DDAA738B2483740900BDCDFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDAA73922483740900BDCDFC /* Readdle_2020_Tests.swift in Sources */,
+				DDAA739A248377C000BDCDFC /* Person+Equatable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DDAA73952483740900BDCDFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD6BD5312481292F00DAD0C0 /* Readdle 2020 */;
+			targetProxy = DDAA73942483740900BDCDFC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DD6BD53B2481292F00DAD0C0 /* Main.storyboard */ = {
@@ -628,6 +710,48 @@
 			};
 			name = Release;
 		};
+		DDAA73972483740900BDCDFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QZTJ8W8QRE;
+				INFOPLIST_FILE = "Readdle 2020 Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "un0dvend1g.Readdle-2020-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Readdle 2020.app/Readdle 2020";
+			};
+			name = Debug;
+		};
+		DDAA73982483740900BDCDFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QZTJ8W8QRE;
+				INFOPLIST_FILE = "Readdle 2020 Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "un0dvend1g.Readdle-2020-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Readdle 2020.app/Readdle 2020";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -645,6 +769,15 @@
 			buildConfigurations = (
 				DD6BD5472481293100DAD0C0 /* Debug */,
 				DD6BD5482481293100DAD0C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDAA73962483740900BDCDFC /* Build configuration list for PBXNativeTarget "Readdle 2020 Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDAA73972483740900BDCDFC /* Debug */,
+				DDAA73982483740900BDCDFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

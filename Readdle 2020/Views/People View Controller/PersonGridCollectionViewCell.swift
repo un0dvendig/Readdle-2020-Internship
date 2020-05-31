@@ -88,7 +88,6 @@ class PersonGridCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupPersonAvatarImageView() {
-        /// personAvatarImageView
         self.addSubview(personAvatarImageView)
         
         personAvatarImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -102,7 +101,6 @@ class PersonGridCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupPersonStatusView() {
-        /// personStatusView
         self.addSubview(personStatusView)
         
         personStatusView.translatesAutoresizingMaskIntoConstraints = false
@@ -120,7 +118,6 @@ class PersonGridCollectionViewCell: UICollectionViewCell {
     
     
     private func setupPersonAvatarLoadingActivityIndicatorView() {
-        /// personAvatarLoadingActivityIndicatorView
         personAvatarImageView.addSubview(personAvatarLoadingActivityIndicatorView)
         
         personAvatarLoadingActivityIndicatorView.translatesAutoresizingMaskIntoConstraints = false

@@ -98,7 +98,6 @@ class PersonListCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupPersonAvatarImageView() {
-        /// personAvatarImageView
         self.addSubview(personAvatarImageView)
         
         personAvatarImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -112,7 +111,6 @@ class PersonListCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupPersonStatusView() {
-        /// personStatusView
         self.addSubview(personStatusView)
         
         personStatusView.translatesAutoresizingMaskIntoConstraints = false

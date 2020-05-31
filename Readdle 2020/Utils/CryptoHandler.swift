@@ -19,7 +19,7 @@ class CryptoHandler {
     
     /// Returns a String, which contains MD5 hash for the given String.
     func createMD5Hash(from string: String) -> String {
-        return MD5(string)
+        return MD5(string).lowercased()
     }
     
 }

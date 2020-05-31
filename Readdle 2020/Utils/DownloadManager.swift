@@ -32,6 +32,7 @@ class DownloadManager {
         session.dataTask(with: url) { (data, response, error) in
             if let error = error {
                 completion(.failure(error))
+                return
             }
             if let response = response as? HTTPURLResponse,
                 response.hasSuccessStatusCode,

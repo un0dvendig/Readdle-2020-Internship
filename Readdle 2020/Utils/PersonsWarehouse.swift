@@ -9,6 +9,7 @@
 import Foundation
 
 /// A singleton object that is responsible for storing and managing all Person entities.
+/// By default has `100` entities.
 class PersonsWarehouse {
     
     // MARK: - Properties
@@ -31,7 +32,11 @@ class PersonsWarehouse {
     // MARK: - Computed properties
     
     dynamic var totalNumberOfPersons: Int {
-        return persons.count
+        get {
+            queue.sync {
+                return self.persons.count
+            }
+        }
     }
     
     // MARK: - Methods
@@ -57,7 +62,7 @@ class PersonsWarehouse {
         return person
     }
     
-    /// Adds a new random Person to the array of available Person entities..
+    /// Adds a new random Person to the end of the array of available Person entities.
     func addRandomPerson() {
         let person = personFactory.createRandomPerson()
         queue.async(flags: .barrier) {
@@ -65,7 +70,15 @@ class PersonsWarehouse {
         }
     }
     
-    /// Adds the Person to the array of available Person entities.
+    /// Adds several new random Person entities to the end of the aray of available Person entities.
+    func addSeveralRandomPersons(numberOfPersons number: Int) {
+        let persons = personFactory.createRandomPersons(numberOfPersonsToCreate: number)
+        queue.async(flags: .barrier) {
+            self.persons.append(contentsOf: persons)
+        }
+    }
+    
+    /// Adds the Person to the end of the array of available Person entities.
     func addPerson(_ person: Person) {
         queue.async(flags: .barrier) {
             self.persons.append(person)
@@ -75,10 +88,10 @@ class PersonsWarehouse {
     /// Replaces a Person entity at given index with the given Person.
     /// If the index is out of range, nothing will happen.
     func changePerson(at index: Int, to person: Person) {
-        guard index < persons.count else {
-            return
-        }
         queue.async(flags: .barrier) {
+            guard index < self.persons.count else {
+                return
+            }
             self.persons[index] = person
         }
     }
@@ -86,10 +99,10 @@ class PersonsWarehouse {
     /// Changes Person entity info at given index with the given info.
     /// If the index is out of range, nothing will happen.
     func changePersonInfo(atIndex index: Int, name: String, email: String, status: Status) {
-        guard index < persons.count else {
-            return
-        }
         queue.async(flags: .barrier) {
+            guard index < self.persons.count else {
+                return
+            }
             let person = self.persons[index]
             person.name = name
             person.email = email
@@ -106,6 +119,17 @@ class PersonsWarehouse {
         }
     }
     
+    /// Deletes Person entity at given index.
+    /// If the index is out of range, nothing will happen.
+    func deletePerson(at index: Int) {
+        queue.async(flags: .barrier) {
+            guard index < self.persons.count else {
+                return
+            }
+            self.persons.remove(at: index)
+        }
+    }
+    
     /// Shuffles all available Person entities.
     func shufflePersons() {
         queue.async(flags: .barrier) {
@@ -113,7 +137,14 @@ class PersonsWarehouse {
         }
     }
     
-    // TODO: - Add method for "Simulate changes" button.
+    /// Deletes all available Person entities.
+    func deleteAllPersons() {
+        queue.async(flags: .barrier) {
+            self.persons = []
+        }
+    }
+    
+    /// Simulates huge changes to all available Person entities.
     func simulateChanges() {
         self.shufflePersons()
         
