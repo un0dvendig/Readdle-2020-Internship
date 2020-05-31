@@ -39,6 +39,8 @@ class PeopleView: UIView {
         return button
     }()
     
+    // MARK: - Properties
+    
     lazy var listLayout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
         let width = peopleCollectionView.bounds.width - 20
@@ -116,8 +118,8 @@ class PeopleView: UIView {
         NSLayoutConstraint.activate([
             peopleSimulateChangesButton.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             peopleSimulateChangesButton.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            peopleSimulateChangesButton.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            peopleSimulateChangesButton.heightAnchor.constraint(equalToConstant: 80)
+            peopleSimulateChangesButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            peopleSimulateChangesButton.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
     
