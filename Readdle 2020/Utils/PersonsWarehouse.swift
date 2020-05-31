@@ -26,7 +26,7 @@ class PersonsWarehouse {
     
     private init() {
         self.personFactory = PersonFactory.shared
-        self.persons = personFactory.createRandomPersons(numberOfPersonsToCreate: 100)
+        self.persons = []
     }
     
     // MARK: - Computed properties

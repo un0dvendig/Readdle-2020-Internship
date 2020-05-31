@@ -42,6 +42,7 @@ struct PeopleViewModel {
     init() {
         self.currentLayout = .list
         
+        PersonsWarehouse.shared.addSeveralRandomPersons(numberOfPersons: 100)
         let dataSource = PeopleCollectionViewDataSource(currentLayout: currentLayout)
         dataSource.alertHandler = alertHandlerReference
         self.collectionViewDataSource = dataSource

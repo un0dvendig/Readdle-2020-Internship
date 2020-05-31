@@ -45,6 +45,9 @@ class Readdle_2020_Tests: XCTestCase {
         let defaultCount: Int = 100
         
         let warehouse = PersonsWarehouse.shared
+        warehouse.deleteAllPersons()
+        warehouse.addSeveralRandomPersons(numberOfPersons: defaultCount)
+        
         XCTAssertNotNil(warehouse.totalNumberOfPersons)
         XCTAssertEqual(warehouse.totalNumberOfPersons, defaultCount) /// This assert should only work while default number of entities is hardcoded.
         
